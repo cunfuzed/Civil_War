@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic Stuff -->
+    <title>Civil War Rush</title>
+    <link rel="icon" type="image/x-icon" href="https://www.laquintaca.gov/home/showpublishedimage/10502/638067858098970000">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Custom Font (Thanks Google Fonts!) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="container">
+    <!--Just a little important thing-->
+    <script src="script.js"></script>
+    
+    <!-- Main Menu -->
+    <div class = "visible scene">
+      <div class="text-center">
+        <h1 class="title">Civil War Rush</h1>
+        <h2 class="subtitle">A battle of knowledge</h2>
+        <!-- Main content -->
+        <div class="row mt-4">
+          <div class="col-sm-4 sidebar">
+            <h1>Made by:</h1>
+          </div>
+          <div class="menu-buttons col-sm-4">
+            <button onclick="changeScene('new_game')" class="btn">
+              New match
+            </button>
+            <button onclick="changeScene('load_game')" class="btn">
+              Load match
+            </button>
+            <button onclick="changeScene('credits')" class="btn">
+              Credits
+            </button>
+          </div>
+          <div class="col-sm-4 sidebar">
+            <h1>How to play:</h1>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- New Game -->
+    <div id="new_game" class="scene">
+      <h1>New Game</h1>
+    </div>
+
+    <!-- Load Game -->
+    <div id="load_game" class="scene">
+      <h1>Load Game</h1>
+    </div>
+
+    <!-- Credits -->
+    <div id="credits" class="scene">
+      <h1>Credits</h1>
+    </div>
+  </body>
+</html>
