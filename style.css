@@ -1,0 +1,46 @@
+.scene {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+body{
+  min-height: 100vh;
+  background-image: url("https://media.istockphoto.com/id/1177294423/photo/battlefield.jpg?s=612x612&w=0&k=20&c=cQY6h9-9hQClpgEh8Vxpdve7X0f4m5D9GCyDPWg438g=");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Cinzel", serif;
+}
+
+.title{
+  font-size:100px;
+}
+
+.menu-buttons {
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+  align-items:center;
+}
+
+.menu-buttons button {
+  width:250px;
+  height:75px;
+  font-size:32px;
+  background-color: #a19797;
+  border-color: #716a6a;
+  border-width: 5px;
+}
+
+.menu-buttons button:hover {
+  background-color: #c3b7b7;
+}
+
+.sidebar{
+  background-color: #a19797;
+  border-style:solid;
+  border-color: #716a6a;
+  border-width: 5px;
+}
