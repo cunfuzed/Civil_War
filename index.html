@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="container">
-    <!--Just a little important thing-->
-    <script src="script.js"></script>
-    
     <!-- Main Menu -->
     <div class = "visible scene">
       <div class="text-center">
@@ -28,6 +25,10 @@
         <div class="row mt-4">
           <div class="col-sm-4 sidebar">
             <h1>Made by:</h1>
+            <h3>Sisheng Zhou - Coding (Functionality)</h3>
+            <h3>Ferris Chia - Coding (Webpage formatting)</h3>
+            <h1>Made for:</h1>
+            <h3>Mr. Giomi's 2026 8th grade history class</h3>
           </div>
           <div class="menu-buttons col-sm-4">
             <button onclick="changeScene('new_game')" class="btn">
@@ -39,9 +40,13 @@
             <button onclick="changeScene('credits')" class="btn">
               Credits
             </button>
+            <button onclick="changeScene('template')" class="btn">
+              Template
+            </button>
           </div>
           <div class="col-sm-4 sidebar">
             <h1>How to play:</h1>
+            <h6>Roll a die to find out how many spaces you can move up. After that, you will be presented with a historical trivia question related to the American Civil War. The difficulty of the question scales based off of how many spaces you may be able to move up. Get it correct, and you can move up that many spaces, get it wrong, and you move down half of however many spaces you rolled on the die (Odd numbers round floor, ie if you get a question wrong with a 3 die, you will move down 1 space insetad of 2). The first one to move a full lap around the board wins.</h6>
           </div>
         </div>
       </div>
@@ -49,7 +54,17 @@
 
     <!-- New Game -->
     <div id="new_game" class="scene">
-      <h1>New Game</h1>
+      <div class = "new-game-container"">
+        <h1>New Game</h1>
+        <input type="text" placeholder="Enter your name">
+        <div class="difficulty-toggle">
+          <button class="difficulty-button" style = "top: 40%;">Easy</button>
+          <button class="difficulty-button" style  = "top: 50%;">Medium</button>
+          <button class="difficulty-button" style = "top: 60%;">Hard</button>
+        </div>
+        <button class="btn" onclick = "changeScene('game')">Start</button>
+        <button class="btn">Back</button>
+      </div>
     </div>
 
     <!-- Load Game -->
@@ -61,5 +76,25 @@
     <div id="credits" class="scene">
       <h1>Credits</h1>
     </div>
+
+    <!--game-->
+    <div id="template" class="scene">
+      <div class="text-center">
+        <div class="question-container">
+          <h2>## Seconds left</h2>
+          <h1>Insert Question</h1>
+        </div>
+        <div class="answers-container">
+          <button class="btn answer">Answer 1</button>
+          <button class="btn answer">Answer 2</button>
+          <button class="btn answer">Answer 3</button>
+          <button class="btn answer">Answer 4</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Just a little important thing-->
+    <script src="script.js"></script>
+    
   </body>
 </html>
