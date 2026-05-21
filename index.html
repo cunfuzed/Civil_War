@@ -2,12 +2,13 @@
 <html>
   <head>
     <!-- Basic Stuff -->
+    <meta charset="UTF-8">
     <title>Civil War Rush</title>
     <link rel="icon" type="image/x-icon" href="https://www.laquintaca.gov/home/showpublishedimage/10502/638067858098970000">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nxbTov4+1p" crossorigin="anonymous"></script>
     <!-- Custom Font (Thanks Google Fonts!) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,7 @@
   </head>
   <body class="container">
     <!-- Main Menu -->
-    <div class = "visible scene">
+    <div id = "menu" class = "visible scene">
       <div class="text-center">
         <h1 class="title">Civil War Rush</h1>
         <h2 class="subtitle">A battle of knowledge</h2>
@@ -40,9 +41,6 @@
             <button onclick="changeScene('credits')" class="btn">
               Credits
             </button>
-            <button onclick="changeScene('template')" class="btn">
-              Template
-            </button>
           </div>
           <div class="col-sm-4 sidebar">
             <h1>How to play:</h1>
@@ -56,11 +54,10 @@
     <div id="new_game" class="scene">
       <div class = "new-game-container"">
         <h1>New Game</h1>
-        <input type="text" placeholder="Enter your name">
-        <div class="difficulty-toggle">
-          <button class="difficulty-button" style = "top: 40%;">Easy</button>
-          <button class="difficulty-button" style  = "top: 50%;">Medium</button>
-          <button class="difficulty-button" style = "top: 60%;">Hard</button>
+        <div class="difficulty-container">
+          <button class="difficulty-button">Easy</button>
+          <button class="difficulty-button">Medium</button>
+          <button class="difficulty-button">Hard</button>
         </div>
         <button class="btn" onclick = "changeScene('game')">Start</button>
         <button class="btn">Back</button>
@@ -78,19 +75,31 @@
     </div>
 
     <!--game-->
-    <div id="template" class="scene">
+    <div id="game" class="scene">
       <div class="text-center">
         <div class="question-container">
-          <h2>## Seconds left</h2>
-          <h1>Insert Question</h1>
+          <h2 id = "timer">## Seconds left</h2>
+          <h1 id = "questionText">Insert Question</h1>
         </div>
         <div class="answers-container">
-          <button class="btn answer">Answer 1</button>
-          <button class="btn answer">Answer 2</button>
-          <button class="btn answer">Answer 3</button>
-          <button class="btn answer">Answer 4</button>
+          <button class="btn answer" id = "button1">Answer 1</button>
+          <button class="btn answer" id = "button2">Answer 2</button>
+          <button class="btn answer" id = "button3">Answer 3</button>
+          <button class="btn answer" id = "button4">Answer 4</button>
         </div>
       </div>
+      <div class="difficulty-text" id = "difficulty-text">difficulty</div>
+    </div>
+
+    <!--The board-->
+    <div id="board" class="scene">
+      <div id="board-wrap">
+        <img src="board.png" alt="ze board" class="board">
+      </div>
+    </div>
+    <!--Finish Scene-->
+    <div id = "finish" class = "scene">
+      
     </div>
 
     <!--Just a little important thing-->
