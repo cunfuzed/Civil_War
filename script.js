@@ -324,7 +324,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 questionText.innerHTML = "CORRECT";
                 questionText.style.color = "green";
                 setTimeout(() => {
-                    moveForward(100);
+                    moveForward(1);
                     questionText.style.color = "black";
                 }, 2000);
                 break;
